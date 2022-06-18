@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'dm sans';
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body{
+    background-image: url('../images/bg-intro-desktop.png');
+    background-color: #e45e3d;
+}
+
+main section{
+    margin:0 2rem;
+    padding:0 1rem;
+}
+
+main section.text{
+    width:40vw;
+    color:white;
+}
+
+main section.text h3{
+    font-size: 2.7rem;
+    font-family: 'poppins';
+    margin:1.3rem 0;
+}
+
+main section.text p{
+    font-size:1.18rem;
+}
+
+main :is(section.form, section form){
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+main section.form button.try-it{
+    display: flex;
+    justify-content: center;
+    text-transform: none;
+    background-color: #7c58ac;
+    box-shadow: .13rem .13rem .4rem rgba(0, 0, 0, 0.27);
+    margin:0 0 0 0;
+}
+
+main section.form button{
+    border:none;
+    outline:none;
+    border-radius: 3px;
+    padding: .9rem 0;
+    color:white;
+    text-transform: uppercase;
+    background-color: #56da7d;
+    font-size: 1.01rem;
+    font-weight: 500;
+    margin-top:.6rem;
+}
+
+main section.form form{
+    margin:2rem 0 0 0;
+    background-color: white;
+    padding: 1.7rem 2.4rem;
+    box-shadow: .13rem .13rem .4rem rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+main section.form form input{
+    font-size: 1.01rem;
+    padding: .6rem .8rem;
+    margin:1.03rem  0 ;
+    outline:none;
+    border:1px solid #c0b9b9;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+main section.form form input:focus{
+    border-color:#352649
+}
+
+main section.form form input:invalid{
+    border-color:red;
+    margin:1rem 0 0 0;
+}
+
+main section.form form input:valid + label{
+    display:none;
+}
+
+main section.form form label{
+    text-align: right;
+    font-size: .91rem;
+    font-style: italic;
+    color:red;
+}
+
+main section.form a{
+    text-decoration: none;
+    color:white;
+}
+
+main section.form form div.other-info{
+    font-size:.9rem;
+    margin-top:.7rem;
+}
+
+main section.form form div.other-info a{
+    color:red;
+}
+
+@media screen and (max-width:768px){
+    body{
+        background-image: url('../images/bg-intro-mobile.png');
+    }
+    
+    main{
+        flex-direction: column;
+        border:1px solid black;
+    }
+
+    main :is(section.text, section.form){
+        width:90vw;
+    }
+
+    main section.text h3{
+        font-size: 1.89rem;
+        text-align: center;
+        margin:0 0 0 0;
+    }
+
+    main section.text p{
+        text-align: center;
+        font-size: 1.05rem;
+        margin:.4rem 0;
+        margin-bottom:2rem;
+    }
+
+    main section.form button.try-it{
+        padding: .9rem 2rem;
+    }
+
+    main section.form form{
+        padding:0 1rem .8rem 1rem;
+        margin-bottom: 1rem;
+    }
+}
